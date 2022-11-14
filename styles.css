@@ -1,0 +1,43 @@
+body {
+    background-color: aqua;
+}
+
+.card {
+    background-color: rgb(120, 242, 255);
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.card-title {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+table {
+    background-color: aquamarine;
+    margin-left: 300px;
+    border: 2px solid black;
+    width: 300px;
+}
+
+td {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    border: 2px solid black;
+    width: 10%;
+    height: 100px;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+button {
+    margin-left: 400px;
+}
