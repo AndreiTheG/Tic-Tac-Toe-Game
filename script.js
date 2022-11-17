@@ -1,7 +1,17 @@
 let pressedCellCount = 1;
 
-function replay() {
-    document.location.reload();
+function pressCell(numberCell) {
+    if (pressedCellCount % 2 != 0) {
+        document.getElementById('cell' + numberCell + '').innerHTML = 'X';
+    } else {
+        document.getElementById('cell'  + numberCell + '').innerHTML = '0';
+    }
+    console.log(pressedCellCount);
+    if (document.getElementById('cell' + numberCell + '').onclick != null) {
+        document.getElementById('cell' + numberCell + '').onclick = null;
+        ++pressedCellCount;
+    }
+    results();
 }
 
 function results() {
@@ -92,16 +102,6 @@ function results() {
     
 }
 
-function pressCell(numberCell) {
-    if (pressedCellCount % 2 != 0) {
-        document.getElementById('cell' + numberCell + '').innerHTML = 'X';
-    } else {
-        document.getElementById('cell'  + numberCell + '').innerHTML = '0';
-    }
-    console.log(pressedCellCount);
-    if (document.getElementById('cell' + numberCell + '').onclick != null) {
-        document.getElementById('cell' + numberCell + '').onclick = null;
-        ++pressedCellCount;
-    }
-    results();
+function replay() {
+    document.location.reload();
 }
