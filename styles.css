@@ -39,6 +39,6 @@ p {
     font-weight: bolder;
 }
 
-button {
-    margin-left: 200px;
+#refresh {
+    margin-left: auto;
 }
