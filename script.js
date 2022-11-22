@@ -31,11 +31,11 @@ function pressCell(numberCell) {
         nextCellsRow += 3;        
     }
     console.log(is_winner);
-    /*console.log(nextCellsRow);
+    console.log(nextCellsRow);
     let nextCellsColumn = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
-        for (let j = nextCellsColumn + 1; j <= nextCellsColumn + 7; ++i) {
+        for (let j = nextCellsColumn + 1; j <= nextCellsColumn + 7; ++j) {
             if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
             } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
@@ -48,7 +48,7 @@ function pressCell(numberCell) {
         ++nextCellsRow;
     }
     console.log(nextCellsColumn);
-    let mainDiagonalXValue = 0, mainDiagonal0Value = 0;
+    /*let mainDiagonalXValue = 0, mainDiagonal0Value = 0;
     for (let i = 1; i <= 9; i += 4) {
         if (document.getElementById('cell' + i + '').innerHTML == 'X') {
             ++mainDiagonalXValue;
