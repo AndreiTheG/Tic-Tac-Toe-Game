@@ -95,7 +95,7 @@ function results() {
                 ++count0Value;
             }
         }
-        if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
+        if (countXValue == 3 || count0Value == 3) {
             is_winner = true;
         }
         nextCellsRow += 3;        
@@ -110,7 +110,7 @@ function results() {
                 ++count0Value;
             }
         }
-        if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
+        if (countXValue == 3 || count0Value == 3) {
             is_winner = true;
         }
         ++nextCellsColumn;
@@ -123,7 +123,7 @@ function results() {
             ++mainDiagonal0Value;
         }
     }
-    if ((mainDiagonalXValue == 3 && mainDiagonal0Value == 0) || (mainDiagonalXValue == 0 && mainDiagonal0Value == 3)) {
+    if (mainDiagonalXValue == 3 || mainDiagonal0Value == 3) {
         is_winner = true;
     }
     let secondaryDiagonalXValue = 0, secondaryDiagonal0Value = 0;
@@ -134,7 +134,7 @@ function results() {
             ++secondaryDiagonal0Value;
         }
     }
-    if ((secondaryDiagonalXValue == 3 && secondaryDiagonal0Value == 0) || (secondaryDiagonalXValue == 0 && secondaryDiagonal0Value == 3)) {
+    if (secondaryDiagonalXValue == 3 || secondaryDiagonal0Value == 3) {
         is_winner = true;
     }
     if (is_winner == true) {
