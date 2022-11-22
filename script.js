@@ -12,23 +12,24 @@ function pressCell(numberCell) {
         ++pressedCellCount;
     }
     console.log(pressedCellCount);
-    /*let is_winner = false;
+    let is_winner = false;
     let nextCellsRow = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
         for (let j = nextCellsRow + 1; j <= nextCellsRow + 3; ++i) {
-            if (document.getElementById('cell' + j + '').innerHTML == 'X') {
+            console.log(j);
+            /*if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
             } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
                 ++count0Value;
-            }
+            }*/
         }
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
             is_winner == true;
         }
         nextCellsRow += 3;
     }
-    console.log(nextCellsRow);
+    /*console.log(nextCellsRow);
     let nextCellsColumn = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
