@@ -16,20 +16,20 @@ function pressCell(numberCell) {
     let nextCellsRow = 0;
     for (let i = 1; i <= 3; ++i) {
         console.log(i);
-        /*let countXValue = 0, count0Value = 0;
-        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3 && nextCellsRow != 10; ++i) {
+        let countXValue = 0, count0Value = 0;
+        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3 && nextCellsRow != 10; ++j) {
             console.log(j);
             /*if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
             } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
                 ++count0Value;
-            }
+            }*/
         }
         nextCellsRow += 3;
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
             is_winner == true;
             i = 4;
-        }*/
+        }
         
     }
     /*console.log(nextCellsRow);
