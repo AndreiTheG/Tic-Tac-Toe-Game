@@ -14,7 +14,7 @@ function pressCell(numberCell) {
     console.log(pressedCellCount);
     let is_winner = false;
     let nextCellsRow = 0;
-    for (let i = 1; i <= 3 && is_winner == false; ++i) {
+    for (let i = 1; i <= 3 && nextCellsRow != 9; ++i) {
         let countXValue = 0, count0Value = 0;
         for (let j = nextCellsRow + 1; j <= nextCellsRow + 3; ++i) {
             console.log(j);
@@ -24,10 +24,12 @@ function pressCell(numberCell) {
                 ++count0Value;
             }*/
         }
+        nextCellsRow += 3;
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
             is_winner == true;
+            nextCellsRow = 9;
         }
-        nextCellsRow += 3;
+        
     }
     /*console.log(nextCellsRow);
     let nextCellsColumn = 0;
