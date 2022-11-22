@@ -30,12 +30,12 @@ function pressCell(numberCell) {
         }
         nextCellsRow += 3;        
     }
-    console.log(is_winner);
-    console.log(nextCellsRow);
+    //console.log(is_winner);
+    //console.log(nextCellsRow);
     let nextCellsColumn = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
-        for (let j = nextCellsColumn + 1; j <= nextCellsColumn + 7; ++j) {
+        for (let j = nextCellsColumn + 1; j <= nextCellsColumn + 7; j += 3) {
             if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
             } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
@@ -43,11 +43,11 @@ function pressCell(numberCell) {
             }
         }
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
-            is_winner == true;
+            is_winner = true;
         }
-        ++nextCellsRow;
+        ++nextCellsColumn;
     }
-    console.log(nextCellsColumn);
+    //console.log(nextCellsColumn);
     /*let mainDiagonalXValue = 0, mainDiagonal0Value = 0;
     for (let i = 1; i <= 9; i += 4) {
         if (document.getElementById('cell' + i + '').innerHTML == 'X') {
@@ -57,7 +57,7 @@ function pressCell(numberCell) {
         }
     }
     if ((mainDiagonalXValue == 3 && mainDiagonal0Value == 0) || (mainDiagonalXValue == 0 && mainDiagonal0Value == 3)) {
-        is_winner == true;
+        is_winner = true;
     }
     let secondaryDiagonalXValue = 0, secondaryDiagonal0Value = 0;
     for (let i = 3; i <= 7; i += 2) {
@@ -68,7 +68,7 @@ function pressCell(numberCell) {
         }
     }
     if ((secondaryDiagonalXValue == 3 && secondaryDiagonal0Value == 0) || (secondaryDiagonalXValue == 0 && secondaryDiagonal0Value == 3)) {
-        is_winner == true;
+        is_winner = true;
     }*/
     if (is_winner == true) {
         document.getElementById('output').innerHTML = 'Winner!';
