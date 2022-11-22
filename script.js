@@ -28,6 +28,43 @@ function results() {
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
             is_winner == true;
         }
+        nextCellsRow += 3;
+    }
+    for (let i = 1; i <= 3 && is_winner == false; ++i) {
+        let countXValue = 0, count0Value = 0;
+        for (let j = nextCellsRow + 1; j <= nextCellsRow + 7; ++i) {
+            if (document.getElementById('cell' + j + '').innerHTML == 'X') {
+                ++countXValue;
+            } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
+                ++count0Value;
+            }
+        }
+        if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
+            is_winner == true;
+        }
+        ++nextCellsRow;
+    }
+    let mainDiagonalXValue = 0, mainDiagonal0Value = 0;
+    for (let i = 1; i <= 9; i += 4) {
+        if (document.getElementById('cell' + i + '').innerHTML == 'X') {
+            ++mainDiagonalXValue;
+        } else if (document.getElementById('cell' + i + '').innerHTML == '0') {
+            ++mainDiagonal0Value;
+        }
+    }
+    if ((mainDiagonalXValue == 3 && mainDiagonal0Value == 0) || (mainDiagonalXValue == 0 && mainDiagonal0Value == 3)) {
+        is_winner == true;
+    }
+    let secondaryDiagonalXValue = 0, secondaryDiagonal0Value = 0;
+    for (let i = 3; i <= 7; i += 2) {
+        if (document.getElementById('cell' + i + '').innerHTML == 'X') {
+            ++secondaryDiagonalXValue;
+        } else if (document.getElementById('cell' + i + '').innerHTML == '0') {
+            ++secondaryDiagonal0Value;
+        }
+    }
+    if ((secondaryDiagonalXValue == 3 && secondaryDiagonal0Value == 0) || (secondaryDiagonalXValue == 0 && secondaryDiagonal0Value == 3)) {
+        is_winner == true;
     }
     /*if (document.getElementById('cell1').innerHTML == 'X' 
         && document.getElementById('cell2').innerHTML == 'X'
@@ -130,9 +167,14 @@ function results() {
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
     }*/
     if (is_winner == true) {
-        for (let i = 1; i <= 9; ++i) {
-            document.getElementById('cell' + i + '').onclick = null;           
-        }
+        document.getElementById('output').innerHTML = 'Winner!';
+        document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'   
+    } else if (pressedCellCount == 10) {
+        document.getElementById('output').innerHTML = 'Draw!';   
+        document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
+    } 
+    for (let i = 1; i <= 9; ++i) {
+        document.getElementById('cell' + i + '').onclick = null;           
     }
 }
 
