@@ -168,14 +168,14 @@ function results() {
     }*/
     if (is_winner == true) {
         document.getElementById('output').innerHTML = 'Winner!';
-        document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'   
+        document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
+        for (let i = 1; i <= 9; ++i) {
+            document.getElementById('cell' + i + '').onclick = null;           
+        }   
     } else if (pressedCellCount == 10) {
         document.getElementById('output').innerHTML = 'Draw!';   
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
     } 
-    for (let i = 1; i <= 9; ++i) {
-        document.getElementById('cell' + i + '').onclick = null;           
-    }
 }
 
 function replay() {
