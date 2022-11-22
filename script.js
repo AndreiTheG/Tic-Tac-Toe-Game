@@ -11,7 +11,7 @@ function pressCell(numberCell) {
         document.getElementById('cell' + numberCell + '').onclick = null;
         ++pressedCellCount;
     }
-    let is_winner = false;
+    /*let is_winner = false;
     let nextCellsRow = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
@@ -75,7 +75,7 @@ function pressCell(numberCell) {
     } else if (pressedCellCount == 10) {
         document.getElementById('output').innerHTML = 'Draw!';   
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
-    }
+    }*/
     //results();
 }
 
