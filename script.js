@@ -18,19 +18,18 @@ function pressCell(numberCell) {
         //console.log(i);
         let countXValue = 0, count0Value = 0;
         for (let j = nextCellsRow + 1; j <= nextCellsRow + 3 && nextCellsRow != 10; ++j) {
-            console.log(j);
-            /*if (document.getElementById('cell' + j + '').innerHTML == 'X') {
+            //console.log(j);
+            if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
             } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
                 ++count0Value;
-            }*/
+            }
         }
         nextCellsRow += 3;
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
             is_winner == true;
             i = 4;
-        }
-        
+        }        
     }
     /*console.log(nextCellsRow);
     let nextCellsColumn = 0;
@@ -70,7 +69,7 @@ function pressCell(numberCell) {
     }
     if ((secondaryDiagonalXValue == 3 && secondaryDiagonal0Value == 0) || (secondaryDiagonalXValue == 0 && secondaryDiagonal0Value == 3)) {
         is_winner == true;
-    }
+    }*/
     if (is_winner == true) {
         document.getElementById('output').innerHTML = 'Winner!';
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
@@ -80,7 +79,7 @@ function pressCell(numberCell) {
     } else if (pressedCellCount == 10) {
         document.getElementById('output').innerHTML = 'Draw!';   
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
-    }*/
+    }
     //results();
 }
 
