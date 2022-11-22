@@ -15,8 +15,21 @@ function pressCell(numberCell) {
 }
 
 function results() {
-    let is_winner = false;
-    if (document.getElementById('cell1').innerHTML == 'X' 
+    let is_winner = false, nextCellsRow = 0;
+    for (let i = 1; i <= 3 && is_winner == false; ++i) {
+        let countXValue = 0, count0Value = 0;
+        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3; ++i) {
+            if (document.getElementById('cell' + j + '').innerHTML == 'X') {
+                ++countXValue;
+            } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
+                ++count0Value;
+            }
+        }
+        if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
+            is_winner == true;
+        }
+    }
+    /*if (document.getElementById('cell1').innerHTML == 'X' 
         && document.getElementById('cell2').innerHTML == 'X'
         && document.getElementById('cell3').innerHTML == 'X') {
             is_winner = true;
@@ -115,7 +128,7 @@ function results() {
     } else if (pressedCellCount == 10) {
         document.getElementById('output').innerHTML = 'Draw!';   
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
-    }
+    }*/
     if (is_winner == true) {
         for (let i = 1; i <= 9; ++i) {
             document.getElementById('cell' + i + '').onclick = null;           
