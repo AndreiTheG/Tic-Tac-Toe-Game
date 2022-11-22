@@ -11,7 +11,7 @@ function pressCell(numberCell) {
         document.getElementById('cell' + numberCell + '').onclick = null;
         ++pressedCellCount;
     }
-    /*let is_winner = false;
+    let is_winner = false;
     let nextCellsRow = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
@@ -28,7 +28,7 @@ function pressCell(numberCell) {
         nextCellsRow += 3;
     }
     console.log(nextCellsRow);
-    let nextCellsColumn = 0;
+    /*let nextCellsColumn = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
         for (let j = nextCellsColumn + 1; j <= nextCellsColumn + 7; ++i) {
