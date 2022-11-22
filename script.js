@@ -14,10 +14,10 @@ function pressCell(numberCell) {
     console.log(pressedCellCount);
     let is_winner = false;
     let nextCellsRow = 0;
-    for (let i = 1; i <= 3; ++i) {
+    for (let i = 1; i <= 3 && is_winner == false; ++i) {
         //console.log(i);
         let countXValue = 0, count0Value = 0;
-        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3 && nextCellsRow != 10; ++j) {
+        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3; ++j) {
             //console.log(j);
             if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
