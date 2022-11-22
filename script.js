@@ -15,7 +15,8 @@ function pressCell(numberCell) {
 }
 
 function results() {
-    let is_winner = false, nextCellsRow = 0;
+    let is_winner = false;
+    /*let nextCellsRow = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
         for (let j = nextCellsRow + 1; j <= nextCellsRow + 3; ++i) {
@@ -30,9 +31,10 @@ function results() {
         }
         nextCellsRow += 3;
     }
+    let nextCellsColumn = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
         let countXValue = 0, count0Value = 0;
-        for (let j = nextCellsRow + 1; j <= nextCellsRow + 7; ++i) {
+        for (let j = nextCellsColumn + 1; j <= nextCellsColumn + 7; ++i) {
             if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
             } else if (document.getElementById('cell' + j + '').innerHTML == '0') {
@@ -65,8 +67,8 @@ function results() {
     }
     if ((secondaryDiagonalXValue == 3 && secondaryDiagonal0Value == 0) || (secondaryDiagonalXValue == 0 && secondaryDiagonal0Value == 3)) {
         is_winner == true;
-    }
-    /*if (document.getElementById('cell1').innerHTML == 'X' 
+    }*/
+    if (document.getElementById('cell1').innerHTML == 'X' 
         && document.getElementById('cell2').innerHTML == 'X'
         && document.getElementById('cell3').innerHTML == 'X') {
             is_winner = true;
@@ -165,17 +167,17 @@ function results() {
     } else if (pressedCellCount == 10) {
         document.getElementById('output').innerHTML = 'Draw!';   
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
-    }*/
+    }
     if (is_winner == true) {
-        document.getElementById('output').innerHTML = 'Winner!';
-        document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
+        //document.getElementById('output').innerHTML = 'Winner!';
+        //document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
         for (let i = 1; i <= 9; ++i) {
             document.getElementById('cell' + i + '').onclick = null;           
         }   
-    } else if (pressedCellCount == 10) {
+    } /*else if (pressedCellCount == 10) {
         document.getElementById('output').innerHTML = 'Draw!';   
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
-    }
+    }*/
 }
 
 function replay() {
