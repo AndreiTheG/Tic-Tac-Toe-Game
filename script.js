@@ -25,11 +25,10 @@ function pressCell(numberCell) {
                 ++count0Value;
             }
         }
-        nextCellsRow += 3;
         if ((countXValue == 3 && count0Value == 0) || (countXValue == 0 && count0Value == 3)) {
-            is_winner == true;
-            i = 4;
-        }        
+            is_winner = true;
+        }
+        nextCellsRow += 3;        
     }
     console.log(is_winner);
     /*console.log(nextCellsRow);
