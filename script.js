@@ -15,7 +15,7 @@ function pressCell(numberCell) {
     let is_winner = false;
     let nextCellsRow = 0;
     for (let i = 1; i <= 3; ++i) {
-        console.log(i);
+        //console.log(i);
         let countXValue = 0, count0Value = 0;
         for (let j = nextCellsRow + 1; j <= nextCellsRow + 3 && nextCellsRow != 10; ++j) {
             console.log(j);
