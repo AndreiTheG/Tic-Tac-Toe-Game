@@ -48,7 +48,7 @@ function pressCell(numberCell) {
         ++nextCellsColumn;
     }
     //console.log(nextCellsColumn);
-    /*let mainDiagonalXValue = 0, mainDiagonal0Value = 0;
+    let mainDiagonalXValue = 0, mainDiagonal0Value = 0;
     for (let i = 1; i <= 9; i += 4) {
         if (document.getElementById('cell' + i + '').innerHTML == 'X') {
             ++mainDiagonalXValue;
@@ -69,7 +69,7 @@ function pressCell(numberCell) {
     }
     if ((secondaryDiagonalXValue == 3 && secondaryDiagonal0Value == 0) || (secondaryDiagonalXValue == 0 && secondaryDiagonal0Value == 3)) {
         is_winner = true;
-    }*/
+    }
     if (is_winner == true) {
         document.getElementById('output').innerHTML = 'Winner!';
         document.getElementById('refresh').innerHTML = '<br><button class="btn btn-success" onclick="replay()">Play again</button>'
