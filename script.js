@@ -16,7 +16,7 @@ function pressCell(numberCell) {
     let nextCellsRow = 0;
     for (let i = 1; i <= 3; ++i) {
         let countXValue = 0, count0Value = 0;
-        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3; ++i) {
+        for (let j = nextCellsRow + 1; j <= nextCellsRow + 3 && nextCellsRow != 10; ++i) {
             console.log(j);
             /*if (document.getElementById('cell' + j + '').innerHTML == 'X') {
                 ++countXValue;
