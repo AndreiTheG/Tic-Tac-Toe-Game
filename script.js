@@ -31,6 +31,7 @@ function pressCell(numberCell) {
             i = 4;
         }        
     }
+    console.log(is_winner);
     /*console.log(nextCellsRow);
     let nextCellsColumn = 0;
     for (let i = 1; i <= 3 && is_winner == false; ++i) {
