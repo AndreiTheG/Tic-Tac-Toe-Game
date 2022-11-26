@@ -6,7 +6,6 @@ function pressCell(numberCell) {
     } else {
         document.getElementById('cell'  + numberCell + '').innerHTML = '0';
     }
-    console.log(pressedCellCount);
     if (document.getElementById('cell' + numberCell + '').onclick != null) {
         document.getElementById('cell' + numberCell + '').onclick = null;
         ++pressedCellCount;
