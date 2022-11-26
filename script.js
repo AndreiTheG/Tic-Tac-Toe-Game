@@ -11,7 +11,6 @@ function pressCell(numberCell) {
         document.getElementById('cell' + numberCell + '').onclick = null;
         ++pressedCellCount;
     }
-    console.log(pressedCellCount);
     results();
 }
 
